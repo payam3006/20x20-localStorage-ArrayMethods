@@ -75,7 +75,7 @@ function setItemsFromItemsObject() {
         ${obj.name}
     </div>
     <div class="itemAmount">
-        ${obj.amount}
+        ${formatNumbr(obj.amount)}
     </div>
 </div>`;
     } else {
@@ -85,7 +85,7 @@ function setItemsFromItemsObject() {
         ${obj.name}
     </div>
     <div class="itemAmount">
-        ${obj.amount}
+        ${formatNumbr(obj.amount)}
     </div>
 </div>`;
     }
@@ -119,6 +119,8 @@ function addItem() {
     setItemsFromItemsObject();
     setLocalStorageFromItemsObject();
 
+    text.value = null;
+    amount.value = null;
     // q(itemsObject);
     // q(text.value);
     // q(amount.value);
@@ -129,6 +131,10 @@ const dollarUS = Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
 }).format;
+
+////for number format . decimal . Thousand ...
+const dollarUSLocale = Intl.NumberFormat("en-US");
+const formatNumbr = Intl.NumberFormat("en-US").format;
 
 function showClose(i) {
   document.getElementById(`close${i}`).classList.remove("hidden");
