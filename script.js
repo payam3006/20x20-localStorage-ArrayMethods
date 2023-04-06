@@ -18,6 +18,12 @@ let lastItem = 0;
 // localStorage.amount2 = 50.345345634;
 
 //localStorage push in objectArray...
+
+//********************************************* */
+// JSON.stringify()
+// JSON.parse()
+//********************************************* */
+
 while (eval(`localStorage.name${lastItem}`)) {
   itemsObject[lastItem] = {
     name: eval(`localStorage.name${lastItem}`),

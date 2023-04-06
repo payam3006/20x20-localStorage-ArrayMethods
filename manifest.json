@@ -1,0 +1,12 @@
+{
+    "name":"Expense Tracker",
+    "display":"standalone",
+    "icons":
+        [
+            {
+            "src":"./dollar.png",
+            "size":"48x48",
+            "type":"image/png"
+            }
+        ]
+}
