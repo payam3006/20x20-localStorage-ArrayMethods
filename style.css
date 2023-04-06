@@ -1,3 +1,125 @@
 body {
   background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  margin: 40px;
+}
+.title {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.yourBalance {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.incomeBox,
+.expenseBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.incomeBox {
+  border-right: 1px solid #e4e4e4;
+}
+
+.totalIncome,
+.totalExpense {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.totalExpense {
+  color: red;
+}
+.totalIncome {
+  color: limegreen;
+}
+hr {
+  border-top: 1px solid #d0d0d0;
+}
+.summary {
+  display: grid;
+  background-color: white;
+  filter: drop-shadow(1px 1px 1px #bbbbbb);
+  grid-template-columns: 1fr 1fr;
+  min-width: 300px;
+  padding: 15px 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  padding: 10px;
+  background-color: white;
+  margin: 10px 0px;
+  filter: drop-shadow(1px 1px 1px #bbbbbb);
+  border-radius: 5px;
+}
+.income {
+  border-right: 7px solid limegreen;
+}
+.expense {
+  border-right: 7px solid red;
+}
+.itemAmount {
+  text-align: right;
+}
+
+.close {
+  position: absolute;
+  left: -30px;
+  top: 3px;
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.addNew {
+  margin-top: 30px;
+}
+label {
+  display: block;
+  width: 100%;
+  margin: 10px 0px;
+}
+input {
+  all: unset;
+  font-weight: 100;
+  background-color: white;
+  margin-top: 5px;
+  width: calc(100% - 24px);
+  /* height: 1.5rem; */
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  filter: drop-shadow(1px 0px 2px #bbbbbb);
+  text-transform: capitalize;
+}
+input:focus-within {
+  border: 2px solid #008cff;
+}
+.addBtn {
+  width: calc(100% - 20px);
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: #613aff;
+  filter: drop-shadow(1px 0px 1px #bf00ff);
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.hidden {
+  opacity: 0;
 }

@@ -7,28 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalStorage-ArrayMethods</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <h1>Expense Tracker</h1>
+    <h2>Expense Tracker</h2>
     <main>
-        <div class="yourBalanceTitle">YOUR BALANCE</div>
-        <div class="yourBalance">$150.00</div>
+        <div class="title">YOUR BALANCE</div>
+        <div id="yourBalance" class="yourBalance">$00.00</div>
         <div class="summary">
             <div class="incomeBox">
-                <div class="incomeTitle">INCOME</div>
-                <div class="totalIncome">$150.00</div>
+                <div class="title">INCOME</div>
+                <div id="totalIncome" class="totalIncome">$00.00</div>
             </div>
             <div class="expenseBox">
-                <div class="expenseTitle">INCOME</div>
-                <div class="totalExpense">$150.00</div>
+                <div class="title">EXPENSE</div>
+                <div id="totalExpense" class="totalExpense">$00.00</div>
             </div>
         </div>
         <div class="history">
             <div class="title">History</div>
             <hr>
-            <div class="historyItems">
-                <div id="item1" class="income item">
+            <div id="historyItems" class="historyItems">
+                <div id="0" class="expense item" onmouseover="showClose(0)" onmouseleave="hideClose(0)">
+                    <div id="close0" class="close hidden" onclick="deleteItem(0)"><i class="fa fa-window-close"></i>
+                    </div>
                     <div class="itemTitle">
                         camera
                     </div>
@@ -36,7 +39,10 @@
                         -100
                     </div>
                 </div>
-                <div id="item2" class="expense item">
+                <div id="1" class="income item" onmouseover="showClose(1)" onmouseleave="hideClose(1)">
+                    <div id="close1" class="close hidden" onclick="deleteItem(1)"><i class="fa fa-window-close"></i>
+                    </div>
+
                     <div class="itemTitle">
                         Cash
                     </div>
@@ -46,19 +52,19 @@
                 </div>
             </div>
             <div class="AddNew">
-                <div class="addNewTitle">Add new transaction</div>
+                <div class="addNew title">Add new transaction</div>
                 <hr>
-                <label for="text">Text
+                <label for="text" class="title">Text
                     <br>
                     <input type="text" id="text" placeholder="Enter text...">
                 </label>
-                <label for="amount">Amount
+                <label for="amount" class="title">Amount
                     <br>
                     (negative - expense, positive - income)
                     <br>
-                    <input type="text" id="amount" placeholder="Enter amount...">
+                    <input type="number" id="amount" placeholder="Enter amount...">
                 </label>
-                <div class="addBtn">Add transaction</div>
+                <div class="addBtn" onclick="addItem()">Add transaction</div>
             </div>
         </div>
     </main>
