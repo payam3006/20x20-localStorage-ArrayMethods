@@ -76,6 +76,10 @@ hr {
   text-align: right;
 }
 
+.itemTitle {
+  text-transform: capitalize;
+}
+
 .close {
   position: absolute;
   left: -30px;
